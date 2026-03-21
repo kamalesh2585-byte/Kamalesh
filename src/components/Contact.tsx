@@ -52,7 +52,7 @@ export default function Contact() {
           <div>
             <p className="text-[#888] text-xs font-semibold tracking-widest uppercase mb-4">04. Engagement</p>
             <h2 className="text-4xl md:text-6xl font-bold text-white tracking-tighter">
-              Let's Connect.
+              Let&apos;s Connect.
             </h2>
           </div>
           <p className="text-[#888] max-w-sm text-sm font-medium leading-relaxed">
