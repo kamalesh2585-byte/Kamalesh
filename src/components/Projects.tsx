@@ -67,6 +67,8 @@ export default function Projects() {
               key={project.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -6 }}
+              whileTap={{ scale: 0.99 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
               className="group relative border border-white/10 bg-[#111] p-8 md:p-12 rounded-xl overflow-hidden hover:border-white/30 transition-colors"
@@ -100,20 +102,24 @@ export default function Projects() {
 
                 {/* Actions */}
                 <div className="flex sm:flex-col gap-4 w-full sm:w-auto shrink-0">
-                  <a
+                  <motion.a
                     href={project.demo}
+                    whileHover={{ scale: 1.03 }}
+                    whileTap={{ scale: 0.98 }}
                     className="flex-1 px-6 py-3 bg-white text-black text-center font-semibold text-sm rounded-lg hover:scale-105 transition-transform"
                   >
                     View Live
-                  </a>
-                  <a
+                  </motion.a>
+                  <motion.a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
+                    whileHover={{ scale: 1.03 }}
+                    whileTap={{ scale: 0.98 }}
                     className="flex-1 px-6 py-3 border border-white/20 text-white text-center font-semibold text-sm rounded-lg hover:bg-white/10 transition-colors"
                   >
                     Source Code
-                  </a>
+                  </motion.a>
                 </div>
               </div>
             </motion.div>

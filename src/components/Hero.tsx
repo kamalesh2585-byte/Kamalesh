@@ -48,7 +48,17 @@ export default function Hero() {
             className="text-[4rem] md:text-[5rem] lg:text-[7rem] font-bold mb-6 leading-[0.9] tracking-tighter"
             variants={itemVariants}
           >
-            Kamalesh.
+            {'KAMALESH.M'.split('').map((letter, index) => (
+              <motion.span
+                key={`${letter}-${index}`}
+                whileHover={{ scale: 1.15, y: -4 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ type: 'spring', stiffness: 260, damping: 18 }}
+                className="inline-block"
+              >
+                {letter}
+              </motion.span>
+            ))}
           </motion.h1>
 
           <motion.p
@@ -63,20 +73,24 @@ export default function Hero() {
             className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
             variants={itemVariants}
           >
-            <a
+            <motion.a
               href="#contact"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
               className="px-8 py-4 bg-white text-black font-semibold text-sm tracking-wide rounded-full text-center hover:scale-105 transition-transform"
             >
               Get in Touch
-            </a>
-            <a
+            </motion.a>
+            <motion.a
               href="https://github.com/kamalesh2585-byte"
               target="_blank"
               rel="noopener noreferrer"
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.98 }}
               className="px-8 py-4 border border-white/20 text-white font-semibold text-sm tracking-wide rounded-full text-center hover:bg-white hover:text-black transition-colors"
             >
               GitHub
-            </a>
+            </motion.a>
           </motion.div>
         </motion.div>
 
@@ -89,8 +103,12 @@ export default function Hero() {
             {/* Elegant monochrome border effect */}
             <div className="absolute inset-0 border border-white/10 rounded-[2rem] transform translate-x-4 translate-y-4"></div>
             
-            <div className="relative w-full h-full rounded-[2rem] overflow-hidden border border-white/5 bg-[#111] grayscale group">
-              {/* Optional: if profile image exists, it'll be desaturated */}
+            <motion.div
+              className="relative w-full h-full rounded-[2rem] overflow-hidden border border-white/5 bg-[#111] group"
+              whileHover={{ scale: 1.02, y: -4 }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ type: 'spring', stiffness: 220, damping: 18 }}
+            >
               <Image
                 src="/profile.jpg"
                 alt="Kamalesh"
@@ -99,7 +117,7 @@ export default function Hero() {
                 priority
               />
               <div className="absolute inset-0 bg-black/20 mix-blend-overlay"></div>
-            </div>
+            </motion.div>
           </div>
         </motion.div>
       </motion.div>

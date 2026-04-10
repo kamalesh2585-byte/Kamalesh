@@ -73,10 +73,12 @@ export default function Contact() {
             <h3 className="text-xl font-bold text-white mb-10 tracking-tight">Direct Channels.</h3>
 
             <div className="space-y-8">
-              <a
+              <motion.a
                 href="https://github.com/kamalesh2585-byte"
                 target="_blank"
                 rel="noopener noreferrer"
+                whileHover={{ x: 6 }}
+                whileTap={{ scale: 0.98 }}
                 className="group block border-b border-white/10 pb-6"
               >
                 <p className="text-[#888] text-xs font-semibold tracking-widest uppercase mb-2">Platform</p>
@@ -84,10 +86,12 @@ export default function Contact() {
                   <p className="text-white text-lg tracking-wide group-hover:pl-2 transition-all">GitHub</p>
                   <span className="text-[#555] group-hover:text-white transition-colors">↗</span>
                 </div>
-              </a>
+              </motion.a>
 
-              <a
+              <motion.a
                 href="mailto:contact@domain.com"
+                whileHover={{ x: 6 }}
+                whileTap={{ scale: 0.98 }}
                 className="group block border-b border-white/10 pb-6"
               >
                 <p className="text-[#888] text-xs font-semibold tracking-widest uppercase mb-2">Direct Mail</p>
@@ -95,7 +99,7 @@ export default function Contact() {
                   <p className="text-white text-lg tracking-wide group-hover:pl-2 transition-all">contact@example.com</p>
                   <span className="text-[#555] group-hover:text-white transition-colors">↗</span>
                 </div>
-              </a>
+              </motion.a>
 
               <div className="block border-b border-white/10 pb-6">
                 <p className="text-[#888] text-xs font-semibold tracking-widest uppercase mb-2">Operating Base</p>
