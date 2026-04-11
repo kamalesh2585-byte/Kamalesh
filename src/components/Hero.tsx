@@ -45,7 +45,7 @@ export default function Hero() {
           </motion.div>
 
           <motion.h1
-            className="text-[4rem] md:text-[5rem] lg:text-[7rem] font-bold mb-6 leading-[0.9] tracking-tighter"
+            className="text-[4rem] md:text-[5rem] lg:text-[7rem] font-bold mb-6 leading-[0.9] tracking-tighter whitespace-nowrap"
             variants={itemVariants}
           >
             {'KAMALESH.M'.split('').map((letter, index) => (
